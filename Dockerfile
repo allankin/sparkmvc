@@ -1,4 +1,4 @@
-FROM centos/centos6
+FROM centos:7
 # Install java
 RUN yum install -y java
 # Install maven
@@ -6,7 +6,7 @@ RUN yum update -y
 
 WORKDIR /app
 
-ADD lib/activation-1.1.jar /app/micro-user-service/lib
+ADD target/activation-1.1.jar /app/micro-user-service/lib
 ADD lib/aopalliance-1.0.jar /app/micro-user-service/lib
 ADD lib/aspectjweaver-1.8.5.jar /app/micro-user-service/lib
 ADD lib/c3p0-0.9.1.2.jar /app/micro-user-service/lib
