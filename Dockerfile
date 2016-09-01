@@ -8,6 +8,7 @@ WORKDIR /app
 
 RUN yum install maven -y
 
+ADD . /app
 RUN mvn clean package
  
 EXPOSE 80
