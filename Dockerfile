@@ -1,4 +1,4 @@
-FROM centos:7
+FROM daocloud.io/allankin/docker-maven:master-6d0ead6
 # Install java
 RUN yum install -y java
 # Install maven
